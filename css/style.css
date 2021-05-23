@@ -4,6 +4,36 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+/* Start Settings Box  */
+.settings-box {
+    position: fixed;
+    width: 200px;
+    min-height: 100vh;
+    top: 0;
+    left: -200px;
+    background-color: #fff;
+    z-index: 1000;
+    transition: .3s;
+
+}
+.settings-box.opened {
+    left: 0;
+}
+.settings-box .icon-gear{
+    position: absolute;
+    right: -30px;
+    padding: 8px 0;
+    width: 30px;
+    top: 100px;
+    text-align: center;
+    background-color: #fff;
+    color: var(--main--color);
+    cursor: pointer;
+}
+.settings-box .settings-content{
+    
+}
+/* End Settings Box  */
 /* Start landing Page  */
 .landing-page {
     min-height: 100vh;
