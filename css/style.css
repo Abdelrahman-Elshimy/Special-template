@@ -30,8 +30,46 @@ body {
     color: var(--main--color);
     cursor: pointer;
 }
-.settings-box .settings-content{
-    
+.settings-box .settings-content .option-box {
+    padding: 20px;
+}
+.settings-box .settings-content .option-box h4 {
+    color: #666;
+    margin: 0;
+}
+.settings-box .settings-content .option-box .color-list {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    padding: 0 !important;
+}
+.settings-box .settings-content .option-box .color-list li{
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .5;
+    transition: .4s;
+    margin: 0px 3px;
+}
+.settings-box .settings-content .option-box .color-list li.active{
+    opacity: 1;
+}
+.settings-box .settings-content .option-box .color-list li:first-child {
+    background-color: #FF9800;
+}
+.settings-box .settings-content .option-box .color-list li:nth-child(2) {
+    background-color: #E91E63;
+}
+.settings-box .settings-content .option-box .color-list li:nth-child(3) {
+    background-color: #009688;
+}
+.settings-box .settings-content .option-box .color-list li:nth-child(4) {
+    background-color: #03A9f4;
+}
+.settings-box .settings-content .option-box .color-list li:nth-child(5) {
+    background-color: #4caf50;
 }
 /* End Settings Box  */
 /* Start landing Page  */
@@ -79,7 +117,10 @@ body {
 .landing-page .header-area .links li a {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
+    text-transform: capitalize;
     transition: .6s;
+    font-size: 1rem;
 }
 .landing-page .header-area .links li a:hover {
     color: var(--main--color);
