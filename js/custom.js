@@ -17,10 +17,19 @@ for(let x = 0; x < 5; x++) {
 }
 landingPage.style.backgroundImage = "url('images/slide0.jpg')";
 
-setInterval(function() {
-    let randomNum = Math.floor(Math.random() * (this.images.length - 1));
-    this.landingPage.style.backgroundImage = 'url("images/'+ images[randomNum] +'.jpg")';
-}, 10000);
+// random bckground option
+let backgroundOption = true;
+let backgroundInterval;
+
+function randomBackground() {
+    if(backgroundOption) {
+       backgroundInterval = setInterval(function() {
+            let randomNum = Math.floor(Math.random() * (this.images.length - 1));
+            this.landingPage.style.backgroundImage = 'url("images/'+ images[randomNum] +'.jpg")';
+        }, 5000);
+    }
+}
+randomBackground();
 
 // End slider
 
@@ -52,4 +61,24 @@ colorsLi.forEach(element => {
     }); 
 });
 
+// switch random background option
+const randomBackOption = document.querySelectorAll(".option-box .random-background span");
+randomBackOption.forEach(span => {
+    console.log(span);
+    span.addEventListener("click", (e) => {
+        console.log(e.target);
+        e.target.parentElement.querySelectorAll(".active").forEach(e => {
+            e.classList.remove("active");
+        });
+        e.target.classList.add("active");
+        if(e.target.dataset.background === 'yes') {
+            this.backgroundOption = true;
+            randomBackground();
+        }
+        else {
+            clearInterval(backgroundInterval);
+            this.backgroundOption = false;
+        }
+    });
+})
 // End Toggle Settings
