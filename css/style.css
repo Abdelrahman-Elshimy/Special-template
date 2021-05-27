@@ -3,6 +3,13 @@
 }
 body {
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+.container {
+    width: 1070px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
 }
 /* Start Settings Box  */
 .settings-box {
@@ -183,3 +190,32 @@ body {
 }
 
 /* End Landing Page  */
+
+/* start about us  */
+.about-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+.about-us .info-box{
+    flex: 1;
+    padding: 30px;
+}
+.about-us .info-box h2{
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--main--color);
+}
+.about-us .info-box p{
+    line-height: 1.8;
+    color: #767676;
+    margin: 0;
+}
+.about-us .image-box{
+    flex: 1;
+}
+.about-us .image-box img{
+    height: 400px;
+    width: 100%;
+}
+/* end about us  */
